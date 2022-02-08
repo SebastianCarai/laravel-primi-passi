@@ -27,7 +27,7 @@ Route::get('/amici', function () {
         'lastname' => 'Rossi',
         'age' => 30,
         'friends' =>[
-            // 'Luca Bianchi', 'Maria Verdi'
+            'Luca Bianchi', 'Maria Verdi'
         ]
     ];
     return view('amici', $data);

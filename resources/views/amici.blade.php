@@ -10,14 +10,12 @@
     <a href="{{route('homepage')}}">Torna alla homepage</a>
 
     <h3>Lista amici di {{ $name }} {{ $lastname }}</h3>
-    @if (count($friends)>0)
+    @forelse($friends as $friend)
         <ul>
-            @foreach ($friends as $friend)
-                <li>{{ $friend}}</li>
-            @endforeach
+            <li>{{ $friend}}</li>
         </ul>
-    @else
-        <b>non ci sono amici</b>
-    @endif
+    @empty
+        <div>Non ci sono amici</div>
+    @endforelse
 </body>
 </html>
